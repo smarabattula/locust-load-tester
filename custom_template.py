@@ -14,14 +14,14 @@ class UserTasks(TaskSet):
     # @task(3)
     # def login(self):
     #    self.client.get("/login")
-    
+
     # @task(4)
     # def logout(self):
     #     self.client.get("/logout")
 
     # @task(5)
     # def process(self):
-        
+
     #     n = random.randint(1, 50)
     #     self.client.get("/process/" + str(n))
 
@@ -48,8 +48,17 @@ class StagesShape(LoadTestShape):
     """
 
     stages = [
-        {"duration": 60, "users": 20, "spawn_rate": 1.0},
-        {"duration": 120, "users": 60, "spawn_rate": 2.0},
+        {"duration": 20, "users":20, "spawn_rate": 1.0},
+        {"duration": 40, "users": 20, "spawn_rate": 1.0},
+        {"duration": 60, "users": 60, "spawn_rate": 2.0},
+        {"duration": 80, "users": 60, "spawn_rate": 2.0},
+        {"duration": 100, "users": 15, "spawn_rate": -3.0},
+        {"duration": 120, "users": 15, "spawn_rate": 1.0},
+        {"duration": 140, "users": 30, "spawn_rate": 1.0},
+        {"duration": 160, "users": 30, "spawn_rate": 1.0},
+        {"duration": 180, "users": 50, "spawn_rate": 1.0},
+        {"duration": 200, "users": 50, "spawn_rate": 1.0},
+        {"duration": 220, "users": 0, "spawn_rate": -4.0},
         # {"duration": 999, "users": 99, "spawn_rate": 00},
         # Add more stages
         ]
